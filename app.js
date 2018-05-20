@@ -51,6 +51,27 @@ client.on('message', message => {
 
     let args = message.content.split(" ").slice(1);
 
+  // !ban
+  if(msg.startsWith(prefix + "ban")){
+    if (message.member.hasPermission("BAN_MEMBERS")){
+      let member = message.mentions.members.first();
+     member.ban().then((member) => {
+        message.channel.send({embed: {
+          title: "Succesfull",
+          color: 3447003,
+          description: `${member.user.username} has succesfully be banned from ${message.guild.name} `
+        }})
+      })
+    }
+    if (!message.member.hasPermission("BAN_MEMBERS")){
+      message.channel.send({embed: {
+        title: "Invalid permissions",
+        color: 3447003,
+        description: "You do not have the required permissions to perform this action \n \n **Permission required: \"Kick_Members\"** "
+      }})
+    }
+  }
+
 
   // !kick
   if(msg.startsWith(prefix + "kick")){
