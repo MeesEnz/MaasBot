@@ -51,6 +51,28 @@ client.on('message', message => {
 
     let args = message.content.split(" ").slice(1);
 
+
+  // !kick
+  if(msg.startsWith(prefix + "kick")){
+    if (message.member.hasPermission("KICK_MEMBERS")){
+      let member = message.mentions.members.first();
+      member.kick().then((member) => {
+        message.channel.send({embed: {
+          title: "Succesfull",
+          color: 3447003,
+          description: `succesfully kicked`
+        }})
+      })
+    }
+    if (!message.member.hasPermission("KICK_MEMBERS")){
+      message.channel.send({embed: {
+        title: "Invalid permissions",
+        color: 3447003,
+        description: "You do not have the required permissions to perform this action \n \n **Permission required: \"Kick_Members\"** "
+      }})
+    }
+  }
+
   // !game
   if (msg.startsWith(prefix + "game")){
     if (message.member.hasPermission("ADMINISTRATOR")){
@@ -209,7 +231,7 @@ client.on('message', message => {
 
 
     // !say (replies with the arguments that have been said)
-    if (msg.startsWith(prefix + "say")){
+    if (msg.startsWith(prefix + "say")){ 
       message.channel.sendMessage(args.join(" "))
     }else
 
