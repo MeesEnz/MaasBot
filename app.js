@@ -60,7 +60,7 @@ client.on('message', message => {
         message.channel.send({embed: {
           title: "Succesfull",
           color: 3447003,
-          description: `succesfully kicked`
+          description: `${member.username} has succesfully be kicked from `
         }})
       })
     }
