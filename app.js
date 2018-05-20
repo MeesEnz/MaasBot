@@ -258,7 +258,7 @@ client.on('message', message => {
 
     // !foo (replies with "bar!")
     if (message.content.startsWith(prefix + "foo")) {
-    message.channel.sendMessage("bar!");
+    message.channel.sendMessage("lul!");
   }
 
   //message.channel.send({embed: {
