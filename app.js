@@ -65,8 +65,8 @@ client.on('message', message => {
   }
     
 
-    // !unban
-  if (msg.startsWit(prefix + "unban")){
+  // !unban
+  if (msg.startsWith(prefix + "unban")){
     if (message.member.hasPermission("BAN_MEMBERS")){
       let member = message.mentions.members.first();
       message.guild.unban(member.user.id)
