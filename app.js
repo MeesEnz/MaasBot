@@ -51,6 +51,20 @@ client.on('message', message => {
 
     let args = message.content.split(" ").slice(1);
 
+  // !unban
+  if (msg.startsWit(prefix + "unban")){
+    if (message.member.hasPermission("BAN_MEMBERS")){
+      let member = message.mentions.members.first();
+      message.guild.unban(member.id)
+      .then(user => message.channel.send({embed: {
+        title: "Succesfull",
+        color: 3447003,
+        description: `${member.user.username} has succesfully be banned from ${message.guild.name}`
+      }}))
+    }
+  }
+    
+
   // !ban
   if(msg.startsWith(prefix + "ban")){
     if (message.member.hasPermission("BAN_MEMBERS")){
@@ -67,7 +81,7 @@ client.on('message', message => {
       message.channel.send({embed: {
         title: "Invalid permissions",
         color: 3447003,
-        description: "You do not have the required permissions to perform this action \n \n **Permission required: \"Kick_Members\"** "
+        description: "You do not have the required permissions to perform this action \n \n **Permission required: \"Ban_Members\"** "
       }})
     }
   }
@@ -75,8 +89,8 @@ client.on('message', message => {
 
   // !kick
   if(msg.startsWith(prefix + "kick")){
-    if (message.member.hasPermission("KICK_MEMBERS")){
-      let member = message.mentions.members.first();
+    let member = message.mentions.members.first();
+    if (message.member.hasPermission("KICK_MEMBERS")){      
       member.kick().then((member) => {
         message.channel.send({embed: {
           title: "Succesfull",
@@ -90,6 +104,13 @@ client.on('message', message => {
         title: "Invalid permissions",
         color: 3447003,
         description: "You do not have the required permissions to perform this action \n \n **Permission required: \"Kick_Members\"** "
+      }})
+    }
+    if (!member){
+      message.channel.send({embed: {
+        title: "Error",
+        color: 3447003,
+        description: "Please mention a user to kick."
       }})
     }
   }
