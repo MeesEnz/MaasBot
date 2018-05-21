@@ -165,7 +165,7 @@ client.on('message', message => {
 
   // !roleinfo (gives information about the role)
   if (msg.startsWith(prefix + "roleinfo")){
-    var argument = message.content.substr("roleinfo ".length);
+    let argument = message.mentions.roles.first()
     
     let Role = message.guild.roles.find("name", argument);
     message.channel.send({embed: {
