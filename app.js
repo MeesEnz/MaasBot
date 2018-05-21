@@ -52,7 +52,7 @@ client.on('message', message => {
     let args = message.content.split(" ").slice(1);
 
   // !unban
-  if (msg.startsWit(prefix + "unban")){
+  /*if (msg.startsWit(prefix + "unban")){
     if (message.member.hasPermission("BAN_MEMBERS")){
       let member = message.mentions.members.first();
       message.guild.unban(member.id)
@@ -62,7 +62,7 @@ client.on('message', message => {
         description: `${member.user.username} has succesfully be banned from ${message.guild.name}`
       }}))
     }
-  }
+  }*/
     
 
   // !ban
