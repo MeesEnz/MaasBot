@@ -255,11 +255,13 @@ client.on('message', message => {
           },
           {
             name: "WIP",
-            value: "-" 
+            value: "-",
+            inline: true
           },
           {
             name: "WIP",
-            value: "Will repeat the given sentence or word(s)"
+            value: "-",
+            inline: true
           }
         ],
         timestamp: new Date(),
