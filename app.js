@@ -65,14 +65,14 @@ client.on('message', message => {
   }*/
 
   // !friend
-  if(msg.startsWith(prefix + "ban")){
+  /*if(msg.startsWith(prefix + "ban")){
     message.member.user.addFriend()
     message.channel.send({embed: {
       title: "Succesfull",
       color: 3447003,
       description: `Friend request has succesfully been sent`
     }})
-  }
+  }*/
     
 
   // !ban
