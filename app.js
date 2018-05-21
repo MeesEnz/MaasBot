@@ -248,12 +248,10 @@ client.on('message', message => {
         },
         title: "Invite code",
         url: "https://discordapp.com/api/oauth2/authorize?client_id=443053206071934997&permissions=0&scope=bot",
-        title: "MaasDev's website",
-        url: "http://maasdevs.orgfree.com/",
         description: "The prefix of this server is \"!\"\n\nMaasBot is a discord bot created by © MaasDev's",
         fields: [{
-            name: "WIP",
-            value: "-"
+            name: "MaasDev's website",
+            value: "[Website](http://maasdevs.orgfree.com/)"
           },
           {
             name: "WIP",
