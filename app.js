@@ -179,7 +179,7 @@ client.on('message', message => {
     description: "Role Information",
     fields: [{
       name: "Role name",
-      value: `${Role.name}`
+      value: `${roles.Role.name}`
     }]
     }})
   }
