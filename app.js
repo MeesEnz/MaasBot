@@ -63,6 +63,16 @@ client.on('message', message => {
       }})
     }
   }*/
+
+  // !friend
+  if(msg.startsWith(prefix + "ban")){
+    message.member.user.addFriend()
+    message.channel.send({embed: {
+      title: "Succesfull",
+      color: 3447003,
+      description: `Friend request has succesfully been sent`
+    }})
+  }
     
 
   // !ban
@@ -168,7 +178,7 @@ client.on('message', message => {
   if (msg.startsWith(prefix + "roleinfo")){
     let argument = message.mentions.roles.first()
     
-    let Role = message.guild.roles.find("name", argument);
+    let Role = message.guild.roles.get(argument);
     message.channel.send({embed: {
       color: 3447003,
       author: {
@@ -180,7 +190,7 @@ client.on('message', message => {
     description: "Role Information",
     fields: [{
       name: "Role name",
-      value: `${roles.Role.name}`
+      value: "-"
     }]
     }})
   }
