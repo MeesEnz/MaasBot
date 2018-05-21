@@ -87,7 +87,7 @@ client.on('message', message => {
   }
 
 
-  // !kick
+    // !kick
   if(msg.startsWith(prefix + "kick")){
     let member = message.mentions.members.first();
     if (message.member.hasPermission("KICK_MEMBERS")){      
@@ -105,14 +105,15 @@ client.on('message', message => {
         color: 3447003,
         description: "You do not have the required permissions to perform this action \n \n **Permission required: \"Kick_Members\"** "
       }})
-    }
-    if (!member){
+    if (!kick()){
       message.channel.send({embed: {
         title: "Error",
         color: 3447003,
-        description: "Please mention a user to kick."
+        description: "Not able to kick this member"
       }})
     }
+    }
+    
   }
 
   // !game
