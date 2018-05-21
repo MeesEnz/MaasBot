@@ -65,15 +65,23 @@ client.on('message', message => {
   }*/
     
 
-  // !unban
-  if (msg.startsWith(prefix + "unban")){
+ // !ban
+  if(msg.startsWith(prefix + "ban")){
+    let member = message.mentions.members.first();
     if (message.member.hasPermission("BAN_MEMBERS")){
-      let member = message.mentions.members.first();
-      message.guild.unban(member.user.id)
+        member.ban().then((member) => {
+        message.channel.send({embed: {
+          title: "Succesfull",
+          color: 3447003,
+          description: `${member.user.username} has succesfully be banned from ${message.guild.name} `
+        }})
+      })
+    }
+    if (!message.member.hasPermission("BAN_MEMBERS")){
       message.channel.send({embed: {
-        title: "Succesfull",
+        title: "Invalid permissions",
         color: 3447003,
-        description: `${member.user.username} has succesfully be banned from ${message.guild.name}`
+        description: "You do not have the required permissions to perform this action \n \n **Permission required: \"Ban_Members\"** "
       }})
     }
   }
