@@ -51,7 +51,7 @@ client.on('message', message => {
 
     let args = message.content.split(" ").slice(1);
 
-   // !unban
+  // !unban
   /*if (msg.startsWith(prefix + "unban")){
     if (message.member.hasPermission("BAN_MEMBERS")){
       let member = message.mentions.members.first();
@@ -65,7 +65,7 @@ client.on('message', message => {
   }*/
     
 
- // !ban
+  // !ban
   if(msg.startsWith(prefix + "ban")){
     let member = message.mentions.members.first();
     if (message.member.hasPermission("BAN_MEMBERS")){
@@ -248,24 +248,26 @@ client.on('message', message => {
         },
         title: "Invite code",
         url: "https://discordapp.com/api/oauth2/authorize?client_id=443053206071934997&permissions=0&scope=bot",
-        description: "The prefix of this server is \"!\"\n\nMaasBot is a discord bot created by @MeesEnz#2770\nThe bot is still in major development and a list for all the available commands is being created.",
+        title: "MaasDev's website",
+        url: "http://maasdevs.orgfree.com/",
+        description: "The prefix of this server is \"!\"\n\nMaasBot is a discord bot created by © MaasDev's",
         fields: [{
-            name: "ping",
-            value: "Will reply with \"pong\" so you can see if the bot is working."
+            name: "WIP",
+            value: "-"
           },
           {
-            name: "mathplus/mathminus/mathmultiply/mathdivide",
-            value: "Will either add, subtract, multiply or divide the given numbers. There is no limit to the amount of numbers you can use, discord has a limit of 2000 characters by default."
+            name: "WIP",
+            value: "-" 
           },
           {
-            name: "say [sentence]",
+            name: "WIP",
             value: "Will repeat the given sentence or word(s)"
           }
         ],
         timestamp: new Date(),
         footer: {
           icon_url: client.user.avatarURL,
-          text: "© MaasBot official"
+          text: "© MaasDev's"
         }
       }
     });
