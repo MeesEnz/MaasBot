@@ -330,13 +330,7 @@ client.on('message', message => {
     message.channel.sendMessage("Bar");
   }
 
-  //message.channel.send({embed: {
-    //color: 3447003,
-    //title: "Error",
-    //description: "That is not a valid command."
-  //}})
-  
-  // !kijken
+    // !kijken
     if (message.content.startsWith("kijken")){
       message.channel.send({embed: {
         title:'Error',
@@ -352,4 +346,4 @@ client.on('message', message => {
 
 
 // Bot 
-client.login(process.env.BOT_TOKEN); 
+client.login(process.env.BOT_TOKEN);
