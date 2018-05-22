@@ -64,15 +64,7 @@ client.on('message', message => {
     }
   }*/
 
-  // !friend
-  if(msg.startsWith(prefix + "friend")){
-    message.member.user.addFriend()
-    message.channel.send({embed: {
-      title: "Succesfull",
-      color: 3447003,
-      description: `Friend request has succesfully been sent`
-    }})
-  }
+
     
 
   // !ban
@@ -343,6 +335,15 @@ client.on('message', message => {
     //title: "Error",
     //description: "That is not a valid command."
   //}})
+  
+  // !kijken
+    if (message.content.startsWith(prefix + "kijken")){
+      message.channel.send({embed: {
+        title:'Error',
+        color: 3447003,
+        description: "Pretty sure you mean: \"koenkeloeren \" \n \n Inside joke, don't cry if you don't get it."
+      }})
+    }
 });
 
 
