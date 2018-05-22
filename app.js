@@ -278,7 +278,7 @@ client.on('message', message => {
             value: "[Website](http://maasdevs.orgfree.com/)"
           },
           {
-            name: "MaasDev discord",
+            name: "MaasDev's official Discord",
             value: "[Discord](http://maasdevs.orgfree.com/)",
             inline: true
           },
