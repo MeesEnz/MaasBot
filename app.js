@@ -64,6 +64,27 @@ client.on('message', message => {
     }
   }*/
 
+  // !role
+  if (msg.startsWith(prefix + "role")){
+    if (message.member.hasPermission("MANAGE_ROLES")){
+      let userToModify = message.mentions.users.first();
+      let roleToAdd = message.mentions.roles.first();
+      userToModify.addRole(roleToAdd);
+      message.channel.send({embed: {
+        title: "Successful",
+        color: 3447003,
+        description: `- has successfully recieved the role: -`
+      }})
+    }
+    if (!message.member.hasPermission("MANAGE_ROLES")){
+      message.channel.send({embed: {
+        title: "Invalid permissions",
+        color: 3447003,
+        description: "You do not have the required permissions to perform this action \n \n **Permission required: \"Ban_Members\"** "
+      }})
+    }
+  }
+
 
     
 
@@ -73,7 +94,7 @@ client.on('message', message => {
     if (message.member.hasPermission("BAN_MEMBERS")){
         member.ban().then((member) => {
         message.channel.send({embed: {
-          title: "Succesfull",
+          title: "Successful",
           color: 3447003,
           description: `${member.user.username} has succesfully be banned from ${message.guild.name} `
         }})
@@ -346,4 +367,4 @@ client.on('message', message => {
 
 
 // Bot 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN); 
