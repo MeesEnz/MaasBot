@@ -67,8 +67,8 @@ client.on('message', message => {
 
 
 
-  // !botinfotest
-  if (msg.startsWith(prefix + "botinfotest")){
+  // !botinfo
+  if (msg.startsWith(prefix + "botinfo")){
     const CoolEmbed = new Discord.RichEmbed()
     .setTitle("This is your title, it can hold 256 characters")
     .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
@@ -282,20 +282,7 @@ client.on('message', message => {
     }
   }
   
-  
-  
-  // !test
-  if (msg.startsWith(prefix + "test")){
-    if (message.member.hasPermission("ADMINISTRATOR")){
-      message.channel.sendMessage('Should work');
-    }
-    if (!message.member.hasPermission("ADMINISTRATOR")){
-      message.channel.send({embed: {
-        color: 3447003,
-        description: "You do not have the required permissions to perform this action \n \n **Permission required: \"Administrator\"** "
-      }});
-    }
-  }else
+
 
 
     // !botinfo (gives some information about the bot)
