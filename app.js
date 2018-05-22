@@ -2,6 +2,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+
 client.on('ready', () => {
   console.log(`I am ready!`);
 });
@@ -63,6 +64,41 @@ client.on('message', message => {
       }})
     }
   }*/
+
+
+
+  // !botinfotest
+  if (msg.startsWith(prefix + "botinfotest")){
+    const CoolEmbed = new Discord.RichEmbed()
+    .setTitle("This is your title, it can hold 256 characters")
+    .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
+    /*
+    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
+    */
+    .setColor(0x00AE86)
+    .setDescription("This is the main body of text, it can hold 2048 characters.")
+    .setFooter("This is the footer text, it can hold 2048 characters", "http://i.imgur.com/w1vhFSR.png")
+    .setImage("http://i.imgur.com/yVpymuV.png")
+    .setThumbnail("http://i.imgur.com/p2qNFag.png")
+    /*
+    * Takes a Date object, defaults to current date.
+    */
+    .setTimestamp()
+    .setURL("https://discord.js.org/#/docs/main/indev/class/RichEmbed")
+    .addField("This is a field title, it can hold 256 characters",
+      "This is a field value, it can hold 2048 characters.")
+    /*
+    * Inline fields may not display as inline if the thumbnail and/or image is too big.
+    */
+    .addField("Inline Field", "They can also be inline.", true)
+    /*
+    * Blank field, useful to create some space.
+    */
+    .addBlankField(true)
+    .addField("Inline Field 3", "You can have a maximum of 25 fields.", true);
+
+    message.channel.send({embed});
+  }
 
   // !role
   if (msg.startsWith(prefix + "role")){
@@ -270,7 +306,7 @@ client.on('message', message => {
           name: "MaasBot information",
           icon_url: client.user.avatarURL
         },
-        title: "Add the Bot to your server",
+        title: "Invite code",
         url: "https://discordapp.com/api/oauth2/authorize?client_id=443053206071934997&permissions=0&scope=bot",
         description: "The prefix of this server is \"!\"\n\nMaasBot is a discord bot created by © MaasDev's",
         fields: [{
@@ -278,19 +314,18 @@ client.on('message', message => {
             value: "[Website](http://maasdevs.orgfree.com/)"
           },
           {
-            name: "MaasDev's official Discord",
-            value: "[Discord](https://www.discord.gg/bSMV57z)",
+            name: "WIP",
+            value: "-",
             inline: true
           },
           {
-            name: "Usefull commands",
+            name: "WIP",
             value: "-",
-            inline: false
+            inline: true
           }
         ],
         timestamp: new Date(),
         footer: {
-          icon_url: client.user.avatarURL,
           text: "© MaasDev's"
         }
       }
