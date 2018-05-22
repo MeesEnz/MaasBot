@@ -389,3 +389,4 @@ client.on('message', message => {
 
 
 // Bot 
+client.login(process.env.BOT_TOKEN); 
