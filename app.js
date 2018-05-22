@@ -337,7 +337,7 @@ client.on('message', message => {
   //}})
   
   // !kijken
-    if (message.content.startsWith(prefix + "kijken")){
+    if (message.content.startsWith("kijken")){
       message.channel.send({embed: {
         title:'Error',
         color: 3447003,
