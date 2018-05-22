@@ -285,7 +285,7 @@ client.on('message', message => {
           {
             name: "Usefull commands",
             value: "-",
-            inline: true
+            inline: false
           }
         ],
         timestamp: new Date(),
