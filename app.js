@@ -331,13 +331,13 @@ client.on('message', message => {
   }
 
     // !kijken
-    if (message.content.startsWith("kijken")){
+    /*if (message.content.startsWith("kijken")){
       message.channel.send({embed: {
         title:'Error',
         color: 3447003,
         description: "Pretty sure you mean: \"koenkeloeren \" \n \n Inside joke, don't cry if you don't get it."
       }})
-    }
+    }*/
 });
 
 
