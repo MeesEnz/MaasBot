@@ -35,7 +35,7 @@ client.on('message', message => {
 
   // !remind (replies with the arguments that have been said)
   if (msg.startsWith(prefix + "remind")){ 
-    setTimeout(2000)
+    setTimeout(' ', 2000)
     message.channel.sendMessage(argsss.join(" "))
   }else
 
