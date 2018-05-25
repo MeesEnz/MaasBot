@@ -33,9 +33,9 @@ client.on('message', message => {
     let argsss = message.content.split(" ").slice(2);
 
 
-    // !remind (replies with the arguments that have been said)
+  // !remind (replies with the arguments that have been said)
   if (msg.startsWith(prefix + "remind")){ 
-
+    setTimeout(2000)
     message.channel.sendMessage(argsss.join(" "))
   }else
 
