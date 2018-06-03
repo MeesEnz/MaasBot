@@ -217,14 +217,12 @@ client.on('message', message => {
             value: "[Website](http://maasdevs.orgfree.com/)"
           },
           {
-            name: "WIP",
-            value: "-",
-            inline: true
+            name: "Discord",
+            value: "[Discord](https://discord.gg/bSMV57z)",
           },
           {
-            name: "WIP",
-            value: "-",
-            inline: true
+            name: "Developer's",
+            value: "MeesEnz, Septic",
           }
         ],
         timestamp: new Date(),
