@@ -218,7 +218,7 @@ client.on('message', message => {
           },
           {
             name: "Discord",
-            value: "[Discord](https://discord.gg/bSMV57z)",
+            value: "[Join our official Discord server](https://discord.gg/bSMV57z)",
           },
           {
             name: "Developer's",
