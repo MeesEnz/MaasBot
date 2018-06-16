@@ -288,7 +288,7 @@ client.on('message', message => {
   }
   
   
-    if (message.content.startsWith(prefix + "Septic")) {
+    if (message.content.startsWith(prefix + "septic")) {
     message.channel.sendMessage("Septic is one of the lead developers of MaasDev's");
   }
 
