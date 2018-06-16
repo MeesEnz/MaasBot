@@ -286,6 +286,11 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + "foo")) {
     message.channel.sendMessage("Bar");
   }
+  
+  
+    if (message.content.startsWith(prefix + "curtis")) {
+    message.channel.sendMessage("is my father");
+  }
 
 });
 
