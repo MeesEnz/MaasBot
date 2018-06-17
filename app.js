@@ -159,7 +159,7 @@ client.on('message', message => {
     }]
     }})
   }
-  
+   
   
   // !settings (needs to be further edited, should be the server settings of the bot)
   if (msg.startsWith(prefix + "settings")){
