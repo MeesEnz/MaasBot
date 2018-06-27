@@ -285,13 +285,10 @@ client.on('message', message => {
   }
 
 
-//!meesenz
-  if (message.content.startsWith(prefix + 'meesenz')) {
-    message.channel.sendMessage();
-  }
-
 
 
 });
+
+
 // Bot 
 client.login(process.env.BOT_TOKEN); 
