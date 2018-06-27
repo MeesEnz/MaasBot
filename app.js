@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 
 client.on('ready', () => {
-  console.log(`I am ready!`);
+  console.log(`MaasBot is ready!!`);
 });
 
 // Prefix
@@ -279,17 +279,19 @@ client.on('message', message => {
     message.channel.sendMessage("Bar");
   }
   
-  
+  //!septic
     if (message.content.startsWith(prefix + "septic")) {
     message.channel.sendMessage("Septic is one of the lead developers of MaasDev's");
   }
 
+
+//!meesenz
+  if (message.content.startsWith(prefix + 'meesenz')) {
+    message.channel.sendMessage();
+  }
+
+
+
 });
-
-
-
-
-
-
 // Bot 
 client.login(process.env.BOT_TOKEN); 
