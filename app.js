@@ -10,16 +10,10 @@ client.on('ready', () => {
 // Prefix
 const prefix = "!";
 
-
-
 //client.on("guildCreate", guild => {
   //guild.defaultChannel.sendMessage(`test`);
   
-  
-
 //})
-
-
 
 
 // Commands
@@ -35,8 +29,6 @@ client.on('message', message => {
 
 
   
-  
-
   // !role
   if (msg.startsWith(prefix + "role")){
     if (message.member.hasPermission("MANAGE_ROLES")){
