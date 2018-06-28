@@ -299,7 +299,11 @@ client.on('message', message => {
       message.channel.send({embed: {
           color: 25500,
           description: said
-      }})}};
+      }})}
+  else {
+    message.channel.send('You do not have Administrator Permissions')
+  }
+  }
 
 });
 
