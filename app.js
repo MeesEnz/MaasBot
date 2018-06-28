@@ -301,7 +301,7 @@ client.on('message', message => {
           description: said
       }})}
   else {
-    message.channel.send('You do not have Administrator Permissions')
+    message.channel.send('Sorry, You do not have Administrator Permissions')
   }
   }
 
