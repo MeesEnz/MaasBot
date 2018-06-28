@@ -287,6 +287,12 @@ client.on('message', message => {
     message.channel.sendMessage("Bar");
   }
 
+  // !branch
+  if (message.content.startsWith(prefix + "branch")) {
+    message.channel.sendMessage("MaasBot is currently running in JavaScript, in the TEST branch");
+  }
+  
+  
 });
 
 
