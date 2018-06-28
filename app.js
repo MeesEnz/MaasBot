@@ -159,7 +159,7 @@ client.on('message', message => {
     }]
     }})
   }
-   
+  
   
   // !settings (needs to be further edited, should be the server settings of the bot)
   if (msg.startsWith(prefix + "settings")){
@@ -286,11 +286,6 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + "foo")) {
     message.channel.sendMessage("Bar");
   }
-  
-  
-    if (message.content.startsWith(prefix + "septic")) {
-    message.channel.sendMessage("Septic is one of the lead developers of MaasDev's");
-  }
 
 });
 
@@ -300,4 +295,4 @@ client.on('message', message => {
 
 
 // Bot 
-client.login(process.env.BOT_TOKEN); 
+client.login(process.env.BOT_TOKEN);
