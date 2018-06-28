@@ -294,11 +294,12 @@ client.on('message', message => {
   
   // !embed
   if (message.content.startsWith(prefix + 'embed')) {
+    if (message.member.hasPermission("ADMINISTRATOR")){
       let said = args.join(" ");
       message.channel.send({embed: {
           color: 25500,
           description: said
-      }})};
+      }})}};
 
 });
 
