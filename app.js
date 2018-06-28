@@ -296,7 +296,7 @@ client.on('message', message => {
   if (message.content.startsWith(prefix + 'embed')) {
       let said = args.join(" ");
       message.channel.send({embed: {
-          color: 3447003,
+          color: red,
           description: said
       }})};
 
