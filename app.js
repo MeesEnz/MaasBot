@@ -292,6 +292,15 @@ client.on('message', message => {
   if (message.content.startsWith(prefix + "branch")) {
     message.channel.sendMessage("MaasBot is currently running in JavaScript, in the 'Master' branch");
   }
+  
+    // !embed
+  if (message.content.startsWith(prefix + 'embed')) {
+      let said = args.join(" ");
+      message.channel.send({embed: {
+          color: 25500,
+          description: said
+      }})};
+
 
 });
 
