@@ -292,7 +292,14 @@ client.on('message', message => {
     message.channel.sendMessage("MaasBot is currently running in JavaScript, in the 'TEST' branch");
   }
   
-  
+  // !embed
+  if (message.content.startsWith(prefix + 'embed')) {
+      let said = args.join(" ");
+      message.channel.send({embed: {
+          color: 3447003,
+          description: said
+      }})
+
 });
 
 
