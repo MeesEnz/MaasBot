@@ -289,7 +289,7 @@ client.on('message', message => {
 
   // !branch
   if (message.content.startsWith(prefix + "branch")) {
-    message.channel.sendMessage("MaasBot is currently running in JavaScript, in the TEST branch");
+    message.channel.sendMessage("MaasBot is currently running in JavaScript, in the 'TEST' branch");
   }
   
   
