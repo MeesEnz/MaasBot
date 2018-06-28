@@ -1,4 +1,4 @@
-// MaasBot Maste
+// MaasBot Master
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -285,6 +285,12 @@ client.on('message', message => {
     // !foo (replies with "bar!")
     if (message.content.startsWith(prefix + "foo")) {
     message.channel.sendMessage("Bar");
+  }
+  
+  // !branch
+  
+  if (message.content.startsWith(prefix + "branch")) {
+    message.channel.sendMessage("MaasBot is currently running in JavaScript, in the 'Master' branch");
   }
 
 });
