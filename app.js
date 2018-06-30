@@ -27,10 +27,11 @@ client.on('message', message => {
 
 
   // check if user has that is
-  if (!message.author.id === 245205190335004674){
+  
   msg = message.content.toLowerCase();
 
     if (message.author.bot) return;
+    if (!message.author.id === 245205190335004674){
     if (!message.content.startsWith("!")) return;
 
     let args = message.content.split(" ").slice(1);
