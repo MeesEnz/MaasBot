@@ -290,7 +290,7 @@ client.on('message', message => {
   // !branch
   if (message.content.startsWith(prefix + "branch")) {
     if (message.member.hasPermission("ADMINISTRATOR")){
-    message.channel.sendMessage("MaasBot is currently running in JavaScript, in the 'Master' branch");
+    message.channel.sendMessage("MaasBot is currently running in JavaScript, in the 'Test' branch");
   }
   else {
     message.channel.send('Sorry, You do not have Administrator Permissions')
@@ -301,10 +301,14 @@ client.on('message', message => {
     if (message.member.hasPermission("ADMINISTRATOR")){
       if (args){
       let said = args.join(" ");
-      message.channel.send({embed: {
+      message.channel. send({embed: {
           color: 3447003,
           description: said
-      }})}}
+      }})}
+    else {
+      message.channel.send("ERROR: No argument found, type /embed 'Your text' without the quotes")
+    }
+    }
   else {
     message.channel.send('Sorry, You do not have Administrator Permissions')
   }
