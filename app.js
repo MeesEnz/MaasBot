@@ -299,18 +299,18 @@ client.on('message', message => {
   // !embed
   if (message.content.startsWith(prefix + 'embed')) {
     if (message.member.hasPermission("ADMINISTRATOR")){
-      if (args){
+      if (!args){
       let said = args.join(" ");
       message.channel.send({embed: {
           color: 3447003,
-          description: said,
-          title: "Embedded"
+          description: "Error: Missing Argument, please insert something to say.",
+          title: "Error"
       }})}
-    else if (!args){
+    else if (args){
       message.channel.send({embed: {
         color: 3447003,
-        description: "Error: Missing Argument, please insert something to say.",
-        title: "Error"
+        description: said,
+        title: "Embedded"
 
       }})
     }}
