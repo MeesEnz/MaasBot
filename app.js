@@ -1,4 +1,4 @@
-// TESTFASE
+// test
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -290,7 +290,7 @@ client.on('message', message => {
   // !branch
   if (message.content.startsWith(prefix + "branch")) {
     if (message.member.hasPermission("ADMINISTRATOR")){
-    message.channel.sendMessage("MaasBot is currently running in JavaScript, in the 'TEST' branch");
+    message.channel.sendMessage("MaasBot is currently running in JavaScript, in the 'Master' branch");
   }
   else {
     message.channel.send('Sorry, You do not have Administrator Permissions')
@@ -299,17 +299,51 @@ client.on('message', message => {
   // !embed
   if (message.content.startsWith(prefix + 'embed')) {
     if (message.member.hasPermission("ADMINISTRATOR")){
+      if (args){
       let said = args.join(" ");
       message.channel.send({embed: {
-          color: 25500,
+          color: 3447003,
           description: said
-      }})}
+      }})}}
   else {
     message.channel.send('Sorry, You do not have Administrator Permissions')
   }
   }
 
-  
+  // !userinfo
+  if ( message.content.startsWith(prefix + "userinfo")) {
+    let member = message.mentions.members.first();
+    let joined = member.joinedAt
+    message.channel.send({embed: {
+      color: 3447003,
+      author: {
+        name: client.user.username,
+        icon_url: member.user.avatarURL
+      },
+      title: `Userinfo of ${member.user.username}`,
+      url: member.user.avatarURL,
+      
+      fields: [{
+        name: "Username",
+        value: member.user.username,
+        incline: true
+      },
+      {
+        name: "Join Date",
+        value: `User joined: ${joined}`,
+        incline: true 
+      },
+      {
+        name: "Highest Role",
+        value: member.highestRole
+      },
+      {
+        name: "User ID",
+        value: member.id,
+        incline: true
+      }] 
+    }})
+  }
   
   
   
