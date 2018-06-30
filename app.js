@@ -24,6 +24,10 @@ const prefix = "!";
 
 // Commands
 client.on('message', message => {
+
+
+  // check if user has that is
+  if (!message.author.id === 245205190335004674){
   msg = message.content.toLowerCase();
 
     if (message.author.bot) return;
@@ -348,7 +352,20 @@ client.on('message', message => {
   
   
   
+}else{
+  message.channel.send({embed: {
+    color: 3447003,
+    description: "The user with the ID: 245205190335004674 is not allowed to use commands.",
+    title: "Invalid permissions"
+  }})
+}
+
+
 });
+
+
+
+
 
 
 
