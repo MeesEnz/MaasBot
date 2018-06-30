@@ -306,14 +306,14 @@ client.on('message', message => {
           description: "Error: Missing Argument, please insert something to say.",
           title: "Error"
       }})}
-    else if (args){
+    else{
       message.channel.send({embed: {
         color: 3447003,
         description: said,
         title: "Embedded"
 
-      }})
-    }}
+      }})}
+    }
   else {
     message.channel.send('Sorry, You do not have Administrator Permissions')
   }
