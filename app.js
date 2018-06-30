@@ -290,7 +290,7 @@ client.on('message', message => {
   // !branch
   if (message.content.startsWith(prefix + "branch")) {
     if (message.member.hasPermission("ADMINISTRATOR")){
-    message.channel.sendMessage("MaasBot is currently running in JavaScript, in the 'TEST' branch");
+    message.channel.sendMessage("MaasBot is currently running in JavaScript, in the 'Master' branch");
   }
   else {
     message.channel.send('Sorry, You do not have Administrator Permissions')
