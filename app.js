@@ -305,9 +305,6 @@ client.on('message', message => {
           color: 3447003,
           description: said
       }})}
-    else if (!args) {
-      message.channel.send("ERROR: No argument found, type /embed 'Your text' without the quotes")
-    }
     }
   else {
     message.channel.send('Sorry, You do not have Administrator Permissions')
