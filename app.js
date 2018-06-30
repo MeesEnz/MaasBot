@@ -291,7 +291,17 @@ client.on('message', message => {
     message.channel.sendMessage("Bar");
   }
   
-
+// !septic
+      if (message.content.startsWith(prefix + "septic")) {
+    message.channel.sendMessage("Septic is one of the main developers of MaasBot, you can find him on the official maasbot discord, which can be found if you type !botinfo");
+  }
+  
+  
+// !meesenz
+      if (message.content.startsWith(prefix + "meesenz")) {
+    message.channel.sendMessage("MeesEnz is one of the main developers of MaasBot, you can find him on the official maasbot discord, which can be found if you type !botinfo");
+  }
+  
   
   // !pong
     if (message.content.startsWith(prefix + "pong")) {
