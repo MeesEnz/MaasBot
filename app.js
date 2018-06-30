@@ -291,10 +291,7 @@ client.on('message', message => {
     message.channel.sendMessage("Bar");
   }
   
-      // !mees
-    if (message.content.startsWith("mees")) {
-    message.channel.sendMessage("ERROR: you said mees, you probably meant kakker");
-  }
+
   
   // !pong
     if (message.content.startsWith(prefix + "pong")) {
