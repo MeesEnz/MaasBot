@@ -1,4 +1,4 @@
-// MaasBot Master
+// TESTFASE
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -286,12 +286,15 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + "foo")) {
     message.channel.sendMessage("Bar");
   }
-  
+
   // !branch
-  
   if (message.content.startsWith(prefix + "branch")) {
-    message.channel.sendMessage("MaasBot is currently running in JavaScript, in the 'Master' branch");
+    if (message.member.hasPermission("ADMINISTRATOR")){
+    message.channel.sendMessage("MaasBot is currently running in JavaScript, in the 'TEST' branch");
   }
+  else {
+    message.channel.send('Sorry, You do not have Administrator Permissions')
+  }}
   
   // !embed
   if (message.content.startsWith(prefix + 'embed')) {
@@ -304,9 +307,9 @@ client.on('message', message => {
   else {
     message.channel.send('Sorry, You do not have Administrator Permissions')
   }
-}
+  }
 
-
+  
   
   
   
