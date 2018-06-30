@@ -290,6 +290,11 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + "foo")) {
     message.channel.sendMessage("Bar");
   }
+  
+  // !pong
+    if (message.content.startsWith(prefix + "pong")) {
+    message.channel.sendMessage("Ping :)");
+  }
 
   // !branch
   if (message.content.startsWith(prefix + "branch")) {
