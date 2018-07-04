@@ -374,7 +374,10 @@ client.on('message', message => {
   
 
 
-
+ //!doyouevengrammer
+ if (message.content.startsWith(prefix + "doyouevengrammer")) {
+    message.reply("You're mom gay,you're pc is shitty, and your a cunt");
+  }
 
 
 });
