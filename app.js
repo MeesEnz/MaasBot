@@ -369,15 +369,14 @@ client.on('message', message => {
   
   //!kijken
   if (message.content.startsWith(prefix + "kijken")) {
-    message.reply("You said 'kijken' i think you meant 'koenkeloeren' please correct your mistakes next time");
+    message.reply("You said 'kijken' i think you meant 'koenkeloeren' please correct your mistake.");
   }
   
+    if message.content.startsWith(i dont give a shit){
+      
+    }
 
-
- //!doyouevengrammer
- if (message.content.startsWith(prefix + "doyouevengrammer")) {
-    message.reply("You're mom gay, you're pc is shitty, and your a cunt");
-  }
+ 
 
 
 });
