@@ -1,7 +1,7 @@
 // Master
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const bannedpeople = {250681287722008576}
+
 
 
 client.on('ready', () => {
