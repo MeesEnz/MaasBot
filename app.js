@@ -367,7 +367,10 @@ client.on('message', message => {
   }
   
   
-  
+  //!kijken
+  if (message.content.startsWith(prefix + "kijken")) {
+    message.reply("You said 'kijken' i think you meant 'koenkeloeren' please correct your mistakes next time");
+  }
   
 
 
