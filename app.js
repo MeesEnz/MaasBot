@@ -1,6 +1,7 @@
 // Master
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const bannedpeople = {250681287722008576}
 
 
 client.on('ready', () => {
@@ -33,6 +34,16 @@ client.on('message', message => {
     if (message.author.bot) return;
     if (!message.content.startsWith("!")) return;
 
+    if (message.author.id == 250681287722008576){ // Brinkie#6986
+      message.channel.send({embed: {
+        title: "Error",
+        color: 3447003,
+        description: "You are not allowed to use MaasBot. Contact MeesEnz#2770 to lift your ban." 
+      }})
+      return
+
+    }
+    
     let args = message.content.split(" ").slice(1);
     let argsss = message.content.split(" ").slice(2);
 
@@ -135,8 +146,17 @@ client.on('message', message => {
   // !avatar [mention] (Returns a link to the profile picture of the mentioned user)
   if (msg.startsWith(prefix + "avatar")){
     let member = message.mentions.members.first();
-    message.channel.sendMessage(member.user.avatarURL);
-    message.delete();
+    if (!member){
+      message.channel.send({embed: {
+        color: 3447003,
+        title: "Error",
+        description: "Please insert a username."
+      }})
+    }
+    if (member){
+      message.channel.sendMessage(member.user.avatarURL);
+      message.delete();
+    }
   }
 
 
@@ -332,49 +352,64 @@ client.on('message', message => {
   }
 
   // !userinfo
-  if ( message.content.startsWith(prefix + "userinfo")) {
-    let member = message.mentions.members.first();
-    let joined = member.joinedAt
+  /*if ( message.content.startsWith(prefix + "userinfo")) {
+    let balzak = message.mentions.members.first();
+    
+    let joined = balzak.joinedAt
     message.channel.send({embed: {
       color: 3447003,
       author: {
-        name: client.user.username,
-        icon_url: member.user.avatarURL
+        name: balzak.user.username,
+        icon_url: balzak.user.avatarURL,
+        
       },
-      title: `Userinfo of ${member.user.username}`,
-      url: member.user.avatarURL,
+      title: `Userinfo of ${balzak.user.username}`,
+      url: balzak.user.avatarURL,
+      description: "test",
       
       fields: [{
         name: "Username",
-        value: member.user.username,
-        incline: true
+        value: "test",
+        
       },
       {
         name: "Join Date",
-        value: `User joined: ${joined}`,
-        incline: true 
+        value: "User joined:",
+         
       },
       {
         name: "Highest Role",
-        value: member.highestRole
+        value: balzak.highestRole,
       },
       {
         name: "User ID",
-        value: member.id,
-        incline: true
-      }] 
-    }})
-  }
+        value: balzak.id,
+        
+      }],
+      timestamp: new Date(),
+      footer: {
+        text: "MaasDev's"
+      } 
+    }
+  });
+  }else*/
   
   
   //!kijken
   if (message.content.startsWith(prefix + "kijken")) {
     message.reply("You said 'kijken' i think you meant 'koenkeloeren' please correct your mistake.");
   }
+
+  //!server
+  if (message.content.startsWith(prefix + "server")) {
+    message.channel.send({embed: {
+      color: 3447003,
+      title: "Discord invite link",
+      description: "https://discord.gg/jGCWDU6"
+    }})
+  }
   
-    if message.content.startsWith(i dont give a shit){
-      
-    }
+   
 
  
 
@@ -391,4 +426,4 @@ client.on('message', message => {
 
 
 // Bot 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);  // process.env.BOT_TOKEN  
