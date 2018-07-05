@@ -412,12 +412,6 @@ client.on('message', message => {
    
 
   
-        if (message.content.startsWith(prefix + "pencil")) {
-    message.channel.sendMessage("If you need a pencil you can contact @❤👌🏿#2994 he got sum up his bum.");
-  }
-  
-
-  
  
 
 
