@@ -38,7 +38,7 @@ client.on('message', message => {
       message.channel.send({embed: {
         title: "Error",
         color: 3447003,
-        description: "You are not allowed to use MaasBot. Contact MeesEnz#2770 to lift your ban." 
+        description: "You are not allowed to use MaasBot. Contact MeesEnz#2770 or Septic#0124 to lift your ban." 
       }})
       return
 
