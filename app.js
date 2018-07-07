@@ -128,20 +128,6 @@ client.on('message', message => {
     
   }
 
-  // !game
-  if (msg.startsWith(prefix + "game")){
-    if (message.member.hasPermission("ADMINISTRATOR")){
-    var argument = message.content.substr("game ".length);
-    client.user.setPresence({ status:'online', game: {name: argument }});
-    }
-    if (!message.member.hasPermission("ADMINISTRATOR")){
-      message.channel.send({embed: {
-        title: "Invalid permissions",
-        color: 3447003,
-        description: "You do not have the required permissions to perform this action \n \n **Permission required: \"Administrator\"** "
-      }})
-    }
-  }
 
 
   // !avatar [mention] (Returns a link to the profile picture of the mentioned user)
