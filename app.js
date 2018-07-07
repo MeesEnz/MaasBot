@@ -6,6 +6,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`I am ready!`);
+  bot.user.setActivity("With functions in Discord.js");
 });
 
 // Prefix
