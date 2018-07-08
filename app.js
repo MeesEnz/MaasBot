@@ -415,7 +415,7 @@ client.on('message', message => {
         .addField("Reason", reason);
 
         message.reply("Your report has been submitted.");
-        let reportschannel = message.guild.channels.find(`name`, "reports");
+        let reportschannel = message.guild.channels.find(`name`, "reportss");
         if(!reportschannel) return message.channel.send("couldn't find reports channel.");
 
         message.delete().catch(O_o=>{});
