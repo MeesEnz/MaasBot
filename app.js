@@ -6,6 +6,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`I am ready!`);
+  bot.user.setActivity("grass grow", {type: "WATCHING"});
 });
 
 // Prefix
