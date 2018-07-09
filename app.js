@@ -1,5 +1,5 @@
 // Master
-const Discord = require('discorrd.js');
+const Discord = require('discord.js');
 const client = new Discord.Client();
 
 
@@ -38,7 +38,7 @@ client.on('message', message => {
       message.channel.send({embed: {
         title: "Error",
         color: 3447003,
-        description: "You are not allowed to use MaasBot. Contact MeesEnz#2770 or Septic#0124 to lift your ban." 
+        description: "You are not allowed to use MaasBot. Contact MeesEnz#2770 to lift your ban." 
       }})
       return
 
@@ -72,6 +72,22 @@ client.on('message', message => {
       }})
     }
   }
+
+
+  // !bug
+  /*if(msg.startsWith(prefix + "bug")){
+    let guild = message.channel.guild;
+    let channell = client.channels.get(448195321441288203);
+    let reason = message.content.split(" ").slice(1).catch
+    
+    message.channel.send({embed: {
+      title: "Bugreport",
+      color: 3447003,
+      description: args
+
+    }})
+    
+  }*/
 
 
     
@@ -127,6 +143,20 @@ client.on('message', message => {
     
   }
 
+  // !game
+  if (msg.startsWith(prefix + "game")){
+    if (message.member.hasPermission("ADMINISTRATOR")){
+    var argument = message.content.substr("game ".length);
+    client.user.setPresence({ status:'online', game: {name: argument }});
+    }
+    if (!message.member.hasPermission("ADMINISTRATOR")){
+      message.channel.send({embed: {
+        title: "Invalid permissions",
+        color: 3447003,
+        description: "You do not have the required permissions to perform this action \n \n **Permission required: \"Administrator\"** "
+      }})
+    }
+  }
 
 
   // !avatar [mention] (Returns a link to the profile picture of the mentioned user)
@@ -397,39 +427,6 @@ client.on('message', message => {
   
    
 
-  
-  if (message.content.startsWith(prefix + "report")) {
-    
-    let rUser = message.guild.member(message.mentions.users.first());
-        if(!rUser) return message.channel.send("ERROR: failed to find user.");
-        let reason = message.content.split(" ").slice(2);
-
-
-        let reportEmbed = new Discord.RichEmbed()
-        .setTitle("Report")
-        .setColor("#15f153")
-        .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
-        .addField("Reported By", `${message.author} with ID: ${message.author.id}`)
-        .addField("Channel", message.channel)
-        .addField("Time", message.createdAt)
-        .addField("Reason", reason);
-
-        message.reply("Your report has been submitted.");
-        let reportschannel = message.guild.channels.find(`name`, "reports");
-        if(!reportschannel) return message.channel.send("couldn't find reports channel.");
-
-        message.delete().catch(O_o=>{});
-        reportschannel.send(reportEmbed);
-
-        return;
-    
-  }
-  
-  
-  
-  
-  
-  
  
 
 
@@ -445,4 +442,4 @@ client.on('message', message => {
 
 
 // Bot 
-client.login(process.env.BOT_TOKEN);  // process.env.BOT_TOKEN  
+client.login("NDQzMDUzMjA2MDcxOTM0OTk3.Dh5jNQ.wLr0fAz6atR6CAqrhhUxvJgzTQ0");  //BOT_TOKEN   
