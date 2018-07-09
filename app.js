@@ -1,7 +1,7 @@
 // Master
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
+Discord.Client.setUsername("MaasBot");
 
 
 client.on('ready', () => {
