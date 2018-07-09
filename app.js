@@ -442,4 +442,4 @@ client.on('message', message => {
 
 
 // Bot 
-client.login("NDQzMDUzMjA2MDcxOTM0OTk3.Dh5jNQ.wLr0fAz6atR6CAqrhhUxvJgzTQ0");  //BOT_TOKEN   
+client.login();  //BOT_TOKEN   
