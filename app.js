@@ -1,5 +1,5 @@
 // Master
-const Discord = require('discord.js');
+const Discord = require('discorrd.js');
 const client = new Discord.Client();
 
 
