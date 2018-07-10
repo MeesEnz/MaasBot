@@ -7,7 +7,7 @@
     "start": "node app.js"
   },
     "engines": {
-    "npm": "6.2.0"
+    "npm": "5.7.1"
   },
   "dependencies": {
     "express": "^4.14.0",
