@@ -441,4 +441,4 @@ client.on('message', message => {
 
 
 // Bot 
-client.login(NDY2Mzc5NjA3Mzc0MDM3MDAy.DibNkA.wpGu_kyn8fE6lx_Cqx-iLmEO-44);  //BOT_TOKEN   
+client.login(process.env.BOT_TOKEN);  //BOT_TOKEN   
