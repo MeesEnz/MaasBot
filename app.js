@@ -360,7 +360,9 @@ client.on('message', message => {
       message.channel.send({embed: {
           color: 3447003,
           description: said
-      }})}}
+      }})}
+    message.delete().catch(O_o=>{});
+    }
   else {
     message.channel.send('Sorry, You do not have Administrator Permissions')
   }
