@@ -97,7 +97,7 @@ client.on('message', message => {
     if (message.member.hasPermission("BAN_MEMBERS")){
         member.ban().then((member) => {
         message.channel.send({embed: {
-          title: "Done",
+          title: "exorcism completed",
           color: 3447003,
           description: `${member.user.username} has successfully been banned from ${message.guild.name} `
         }})
@@ -119,7 +119,7 @@ client.on('message', message => {
     if (message.member.hasPermission("KICK_MEMBERS")){      
       member.kick().then((member) => {
         message.channel.send({embed: {
-          title: "Done",
+          title: "Execution completed",
           color: 3447003,
           description: `${member.user.username} has successfully been kicked from ${message.guild.name} `
         }})
