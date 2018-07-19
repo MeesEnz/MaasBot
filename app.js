@@ -99,7 +99,7 @@ client.on('message', message => {
         message.channel.send({embed: {
           title: "Successful",
           color: 3447003,
-          description: `${member.user.username} has succesfully be banned from ${message.guild.name} `
+          description: `${member.user.username} has successfully be banned from ${message.guild.name} `
         }})
       })
     }
@@ -121,7 +121,7 @@ client.on('message', message => {
         message.channel.send({embed: {
           title: "Succesfull",
           color: 3447003,
-          description: `${member.user.username} has succesfully be kicked from ${message.guild.name} `
+          description: `${member.user.username} has successfully be kicked from ${message.guild.name} `
         }})
       })
     }
