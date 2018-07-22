@@ -427,7 +427,7 @@ client.on('message', message => {
   }
   
    
-    if (message.content.startsWith("who created maasbot?")) {
+    if (message.content.startsWith(prefix + "test")) {
     message.channel.sendMessage("MaasBot is a Discord bot that is being developed by MeesEnz and Septic, if you want to find them you can go to the official MaasDev's Discord server and message them through there. (tip: to find the MaasDev's server type !server or type !botinfo and look for the discord link.)");
   }
   
