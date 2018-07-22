@@ -421,12 +421,17 @@ client.on('message', message => {
   if (message.content.startsWith(prefix + "server")) {
     message.channel.send({embed: {
       color: 3447003,
-      title: "Discord invite link",
-      description: "https://discord.gg/jGCWDU6"
+      title: "Official MaasDev's Discord Server",
+      description: "https://discord.gg/bSMV57z"
     }})
   }
   
    
+    if (message.content.startsWith("who created maasbot?")) {
+    message.channel.sendMessage("MaasBot is a Discord bot that is being developed by MeesEnz and Septic, if you want to find them you can go to the official MaasDev's Discord server and message them through there. (tip: to finf the MaasDev's server type !server or type !botinfo and look for the discord link.)");
+  }
+  
+  
 
  
 
