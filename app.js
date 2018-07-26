@@ -420,10 +420,7 @@ client.on('message', message => {
   }
 
   
-      if (message.content.startsWith(prefix + "fivem")) {
-    message.channel.sendMessage("If you want to play FiveM consider joining Tactical Retreat Network (trn) : https://discord.gg/trdr92d");
-  }
-  
+
   
   //!server
   if (message.content.startsWith(prefix + "server")) {
