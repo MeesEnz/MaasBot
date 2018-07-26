@@ -412,6 +412,8 @@ client.on('message', message => {
   }else*/
   
   
+  
+  
   //!kijken
   if (message.content.startsWith(prefix + "kijken")) {
     message.reply("You said 'kijken' i think you meant 'koenkeloeren' please correct your mistake.");
@@ -426,10 +428,6 @@ client.on('message', message => {
     }})
   }
   
-     if (message.content.startsWith(prefix + "whatisthebestfivemserver?")) {
-    message.reply("The best FiveM server is the FiveM server of Tactical Retreat Network (trn) https://discord.gg/trdr92d");
-  }
-
   
 
  
