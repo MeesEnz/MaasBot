@@ -276,6 +276,7 @@ client.on('message', message => {
     // !say (replies with the arguments that have been said)
     if (msg.startsWith(prefix + "say")){ 
       message.channel.sendMessage(args.join(" "))
+      message.delete().catch(O_o=>{});
     }else
 
 
