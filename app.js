@@ -419,6 +419,12 @@ client.on('message', message => {
     message.reply("You said 'kijken' i think you meant 'koenkeloeren' please correct your mistake.");
   }
 
+  
+      if (message.content.startsWith(prefix + "fivem")) {
+    message.channel.sendMessage("The best FiveM server is the FiveM server of Tactical Retreat Network (trn) https://discord.gg/trdr92d");
+  }
+  
+  
   //!server
   if (message.content.startsWith(prefix + "server")) {
     message.channel.send({embed: {
