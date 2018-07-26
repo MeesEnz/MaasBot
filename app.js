@@ -67,7 +67,7 @@ client.on('message', message => {
       message.channel.send({embed: {
         title: "Invalid permissions",
         color: 3447003,
-        description: "You do not have the required permissions to perform this action \n \n **Permission required: \"Ban_Members\"** "
+        description: "You do not have the required permissions to perform this action \n \n **Permission required: \"MANAGE_ROLES\"** "
       }})
     }
   }
