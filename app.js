@@ -446,7 +446,7 @@ client.on('message', message => {
   
   if(message.content.startsWith(prefix + "emsshutdown")){
     message.reply("SHUTTING DOWN...");
-    cleint.destroy();
+    client.destroy();
   }
 
   
