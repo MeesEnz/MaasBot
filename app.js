@@ -426,14 +426,14 @@ client.on('message', message => {
         if(message.author.id === "244553339864350720"){
         function shutdownaa(){
         message.reply("Restarting...");
-        bot.destroy();
+        client.destroy();
     }
         function startaa(){
-        bot.login(botconfig.token);
+        client.login(process.env.BOT_TOKEN);
         message.channel.send("Back Online.")
         }
         shutdownaa();
-        setTimeout(startaa, 6000);
+        setTimeout(startaa, 2000);
 
     
     }
