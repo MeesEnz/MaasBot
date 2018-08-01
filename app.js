@@ -421,6 +421,32 @@ client.on('message', message => {
   }
 
   
+  
+      if(message.content.startsWith(prefix + "restart")){
+        if(message.author.id === "244553339864350720"){
+        function shutdownaa(){
+        message.reply("Restarting...");
+        bot.destroy();
+    }
+        function startaa(){
+        bot.login(botconfig.token);
+        message.channel.send("Back Online.")
+        }
+        shutdownaa();
+        setTimeout(startaa, 6000);
+
+    
+    }
+    else{
+        message.reply("Sorry, you can't do that.")
+    }
+
+};
+  
+  
+  
+  
+  
 
   
   //!server
