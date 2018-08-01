@@ -446,7 +446,7 @@ client.on('message', message => {
   
   if(message.content.startsWith(prefix + "emsshutdown")){
     message.reply("SHUTTING DOWN...");
-    client.users.get("244553339864350720").send("IMPORTANT!, I did an emergency shutdown, MaasBot is down until you restart it in heroku");
+    message.author.send("IMPORTANT!, I did an emergency shutdown, MaasBot is down until you restart it in heroku");
     client.destroy();
   }
 
