@@ -451,7 +451,10 @@ client.on('message', message => {
   }
 
   
-  
+  if (message.content.startsWith(prefix + "pmme")){
+    message.reply("`I messaged you the following message:` " + message.content.slice(6));
+    message.author.send("`You ordered me to pm you this message: `" + '\n' + message.content.slice(6));
+}
   
 
   
