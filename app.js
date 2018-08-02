@@ -463,7 +463,7 @@ client.on('message', message => {
     message.channel.send({embed: {
       color: 3447003,
       title: "Official MaasDev's Discord Server",
-      description: "https://discord.gg/bSMV57z"
+      description: "https://discord.gg/hYKvdjt"
     }})
   }
   
