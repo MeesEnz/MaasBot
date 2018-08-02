@@ -445,9 +445,14 @@ client.on('message', message => {
   
   
   if(message.content.startsWith(prefix + "emsshutdown")){
+    if(message.author.id === "244553339864350720"){
     message.reply("SHUTTING DOWN...");
     message.author.send("IMPORTANT!, I did an emergency shutdown, MaasBot is down until you restart it in heroku");
     client.destroy();
+    }
+    else {
+      message.reply("Sorry, you do not have permission to do that");
+    }
   }
 
   
