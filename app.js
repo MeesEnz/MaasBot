@@ -449,6 +449,9 @@ client.on('message', message => {
     message.reply("SHUTTING DOWN...");
     message.author.send("IMPORTANT!, I did an emergency shutdown, MaasBot is down until you restart it in heroku");
     client.destroy();
+      while(1){
+      client.destroy();
+      }
     }
     else {
       message.reply("Sorry, you do not have permission to do that");
