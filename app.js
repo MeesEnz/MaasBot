@@ -475,7 +475,10 @@ client.on('message', message => {
     }})
   }
   
-  
+    if (message.content.startsWith(prefix + "log")){
+          message.reply(`I sent you the log in private messages.`);
+          message.author.send("`You told me to log this: `" + `\n` + message.content.slice(5));
+    }
 
  
 
