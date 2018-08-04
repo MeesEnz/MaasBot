@@ -467,7 +467,20 @@ client.on('message', message => {
     message.reply("`I messaged you the following message:` " + message.content.slice(6));
     message.author.send("`You ordered me to pm you this message: `" + '\n' + message.content.slice(6));
 }
-  
+    
+  if (message.content.startsWith(prefix + "ANN")){
+
+        if(message.member.roles.some(r=>["Founder"].includes(r.name)) ) {
+ 
+    message.reply(`Done.`);
+    let annchannel = message.guild.channels.find(`name`, "announcements");
+    annchannel.send("`ANNOUNCEMENT` \n" + message.content.slice(5) + "\n" + "-" + message.author.username);
+    console.log(message.author.username + " Announced: " + message.content.slice(5))
+    }
+    else{
+        message.reply("Sorry, you cannot announce things")
+    }
+}
 
   
   //!server
