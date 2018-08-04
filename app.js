@@ -480,10 +480,17 @@ client.on('message', message => {
   }
   
     if (message.content.startsWith(prefix + "log")){
+          if(message.member.roles.some(r=>["Staff"].includes(r.name)) ) {
+      
           message.reply(`I sent you the log in private messages.`);
           message.author.send("`You told me to log this: `" + `\n` + message.content.slice(5));
           let logchannel = message.guild.channels.find(`name`, "log");
     logchannel.send("`" + message.author.username + " logged this: `" + "\n" + message.content.slice(5))
+          }
+       else{
+        message.reply("Sorry, you cannot log things")
+    }
+      
     }
 
  
