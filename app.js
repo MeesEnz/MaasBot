@@ -459,6 +459,10 @@ client.on('message', message => {
   }
 
   
+
+  
+  
+  
   if (message.content.startsWith(prefix + "pmme")){
     message.reply("`I messaged you the following message:` " + message.content.slice(6));
     message.author.send("`You ordered me to pm you this message: `" + '\n' + message.content.slice(6));
@@ -478,6 +482,8 @@ client.on('message', message => {
     if (message.content.startsWith(prefix + "log")){
           message.reply(`I sent you the log in private messages.`);
           message.author.send("`You told me to log this: `" + `\n` + message.content.slice(5));
+          let logchannel = message.guild.channels.find(`name`, "log");
+    logchannel.send("`" + message.author.username + " logged this: `" + "\n" + message.content.slice(5))
     }
 
  
