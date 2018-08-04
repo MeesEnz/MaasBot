@@ -468,7 +468,7 @@ client.on('message', message => {
     message.author.send("`You ordered me to pm you this message: `" + '\n' + message.content.slice(6));
 }
     
-  if (message.content.startsWith(prefix + "ANN")){
+  if (message.content.startsWith(prefix + "ann")){
 
         if(message.member.roles.some(r=>["Founder"].includes(r.name)) ) {
  
