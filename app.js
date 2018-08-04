@@ -479,6 +479,14 @@ client.on('message', message => {
     }})
   }
   
+  
+  
+   if (message.content.startsWith(prefix + "version")){
+     message.channel.send("MaasBot is currently at version 1.0.2");
+   }
+  
+  
+  
     if (message.content.startsWith(prefix + "log")){
           if(message.member.roles.some(r=>["Staff"].includes(r.name)) ) {
       
