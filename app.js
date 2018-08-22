@@ -478,7 +478,7 @@ client.on('message', message => {
     message.reply("Done.")
     let logchannel = message.guild.channels.find(`name`, "log");
     logchannel.send("`" + message.author.username + " issued this warning: `" + '\n' + wUser + '\n' + wreason + '\n' + "`        `")
-   wUser.send(message.author.username + "warned you for: " + wreason)
+   wUser.send(message.author.username + " warned you for: " + wreason)
         
         }
 else{
