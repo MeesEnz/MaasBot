@@ -467,7 +467,25 @@ client.on('message', message => {
     message.reply("`I messaged you the following message:` " + message.content.slice(6));
     message.author.send("`You ordered me to pm you this message: `" + '\n' + message.content.slice(6));
 }
+  
+  if (message.content.startsWith(prefix + "warn")){
     
+        if(message.member.roles.some(r=>["Staff"].includes(r.name)) ){
+    let wUser = message.guild.member(message.mentions.users.first());
+    if(!wUser) return message.channel.send("ERROR: failed to find user.");
+    let wreason = message.content.split(" ").slice(2);
+    console.log(message.author.username + " has warned " + wUser + "for: " + wreason)
+    message.reply("Done.")
+    let logchannel = message.guild.channels.find(`name`, "log");
+    logchannel.send("`" + message.author.username + " issued this warning: `" + '\n' + wUser + '\n' + wreason + '\n' + "`        `")
+    }
+else{
+    message.reply("Sorry you do not have the role: 'Staff'")
+}
+    
+  }
+  
+  
   if (message.content.startsWith(prefix + "ann")){
 
         if(message.member.roles.some(r=>["Founder"].includes(r.name)) ) {
