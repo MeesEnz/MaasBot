@@ -470,7 +470,7 @@ client.on('message', message => {
   
   if (message.content.startsWith(prefix + "warn")){
     
-        if(message.member.roles.some(r=>["Staff"].includes(r.name)) ){
+        if (message.member.hasPermission("ADMINISTRATOR")){
     let wUser = message.guild.member(message.mentions.users.first());
     if(!wUser) return message.channel.send("ERROR: failed to find user.");
     let wreason = message.content.split(" ").slice(2);
@@ -482,7 +482,7 @@ client.on('message', message => {
         
         }
 else{
-    message.reply("Sorry you do not have the role: 'Staff'")
+    message.reply("Sorry you do not have admin perms")
 }
     
   }
@@ -490,7 +490,7 @@ else{
   
   if (message.content.startsWith(prefix + "ann")){
 
-        if(message.member.roles.some(r=>["Founder"].includes(r.name)) ) {
+        if (message.member.hasPermission("ADMINISTRATOR")) {
  
     message.reply(`Done.`);
     let annchannel = message.guild.channels.find(`name`, "announcements");
@@ -521,7 +521,7 @@ else{
   
   
     if (message.content.startsWith(prefix + "log")){
-          if(message.member.roles.some(r=>["Staff"].includes(r.name)) ) {
+          if (message.member.hasPermission("ADMINISTRATOR")) {
       
           message.reply(`I sent you the log in private messages.`);
           message.author.send("`You told me to log this: `" + `\n` + message.content.slice(5));
