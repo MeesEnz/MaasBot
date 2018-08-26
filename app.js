@@ -102,6 +102,9 @@ client.on('message', message => {
           description: `${member.user.username} has successfully been banned from ${message.guild.name} `
         }})
       })
+                if(logchannel){
+              logchannel.send("`" + message.author.username + " issued a kick on: `" + "\n" + member)
+          }
     }
     if (!message.member.hasPermission("BAN_MEMBERS")){
       message.channel.send({embed: {
@@ -124,6 +127,9 @@ client.on('message', message => {
           description: `${member.user.username} has successfully been kicked from ${message.guild.name} `
         }})
       })
+                if(logchannel){
+              logchannel.send("`" + message.author.username + " issued a kick on: `" + "\n" + member)
+          }
     }
     if (!message.member.hasPermission("KICK_MEMBERS")){
       message.channel.send({embed: {
