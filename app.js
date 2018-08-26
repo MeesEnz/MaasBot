@@ -45,7 +45,7 @@ client.on('message', message => {
     
     let args = message.content.split(" ").slice(1);
     let argsss = message.content.split(" ").slice(2);
-
+    let logchannel = message.guild.channels.find(`name`, "log");
 
 
   
@@ -476,7 +476,6 @@ client.on('message', message => {
     let wreason = message.content.split(" ").slice(2);
     console.log(message.author.username + " has warned " + wUser + "for: " + wreason)
     message.reply("Done.")
-    let logchannel = message.guild.channels.find(`name`, "log");
     logchannel.send("`" + message.author.username + " issued this warning: `" + '\n' + wUser + '\n' + wreason + '\n' + "`        `")
    wUser.send(message.author.username + " warned you for: " + wreason)
         
@@ -525,7 +524,6 @@ else{
       
           message.reply(`I sent you the log in private messages.`);
           message.author.send("`You told me to log this: `" + `\n` + message.content.slice(5));
-          let logchannel = message.guild.channels.find(`name`, "log");
     logchannel.send("`" + message.author.username + " logged this: `" + "\n" + message.content.slice(5))
           }
        else{
