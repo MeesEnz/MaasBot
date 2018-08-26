@@ -103,7 +103,7 @@ client.on('message', message => {
         }})
       })
                 if(logchannel){
-              logchannel.send("`" + message.author.username + " issued a kick on: `" + "\n" + member)
+              logchannel.send("`" + message.author.username + " issued a ban on: `" + "\n" + member)
           }
     }
     if (!message.member.hasPermission("BAN_MEMBERS")){
