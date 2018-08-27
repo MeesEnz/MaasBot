@@ -263,7 +263,7 @@ client.on('message', message => {
           },
           {
             name: "Discord",
-            value: "[Join our official Discord server](https://discord.gg/hYKvdjt)",
+            value: "[Join our official Discord server](https://discord.gg/cJwmExU)",
           },
           {
             name: "Developer's",
@@ -513,7 +513,7 @@ else{
     message.channel.send({embed: {
       color: 3447003,
       title: "Official MaasDev's Discord Server",
-      description: "https://discord.gg/hYKvdjt"
+      description: "https://discord.gg/cJwmExU"
     }})
   }
   
