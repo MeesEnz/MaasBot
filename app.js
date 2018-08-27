@@ -449,9 +449,10 @@ client.on('message', message => {
 
 };
   
-  
+  // !emsshutdown
+  // !emsshutdown sluit the MaasBot client af in geval van nood weetikveel alleen als je mees of septic bent btw hahah
   if(message.content.startsWith(prefix + "emsshutdown")){
-    if(message.author.id === "244553339864350720"){
+    if(message.author.id === "244553339864350720" || message.author.id === "223838261305540609"){
     message.reply("SHUTTING DOWN...");
     message.author.send("IMPORTANT!, I did an emergency shutdown, MaasBot is down until you restart it in heroku");
     client.destroy();
@@ -467,13 +468,17 @@ client.on('message', message => {
   
 
   
-  
+  // !pmme
+  // !pmme [text] dm'd je de text
   
   if (message.content.startsWith(prefix + "pmme")){
     message.reply("`I messaged you the following message:` " + message.content.slice(6));
     message.author.send("`You ordered me to pm you this message: `" + '\n' + message.content.slice(6));
 }
   
+  
+  // !warn
+  // !warn @mention [reden] stuurt de waarschuwing en de reden in het kanaal genaamd "log" en dm'd de persoon die gewaarschuwd is
   if (message.content.startsWith(prefix + "warn")){
     
         if (message.member.hasPermission("ADMINISTRATOR")){
@@ -493,6 +498,8 @@ else{
   }
   
   
+  // !ann
+  // !ann [text] stuurt de text in een kanaal genaamt announcements als die bestaat
   if (message.content.startsWith(prefix + "ann")){
 
         if (message.member.hasPermission("ADMINISTRATOR")) {
@@ -518,13 +525,10 @@ else{
   }
   
   
+
   
-   if (message.content.startsWith(prefix + "version")){
-     message.channel.send("MaasBot is currently at version 1.0.2");
-   }
-  
-  
-  
+  // !log
+  // !log [text] dm'd je de text en stuurt het in het kanaal genaamt "log" als die bestaat
     if (message.content.startsWith(prefix + "log")){
           if (message.member.hasPermission("ADMINISTRATOR")) {
       
