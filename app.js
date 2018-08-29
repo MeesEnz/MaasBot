@@ -480,7 +480,8 @@ client.on('message', message => {
   // !report
   
   if (message.content.startsWith(prefix + "report")){
-        let rUser = message.guild.member(message.mentions.users.first());
+
+            let rUser = message.guild.member(message.mentions.users.first());
         if(!rUser) return message.channel.send("ERROR: failed to find user.");
         let rReason = message.content.slice(8);
 
@@ -489,8 +490,33 @@ client.on('message', message => {
         if(!reportschannel) return message.channel.send("couldn't find reports channel.");
 
         message.delete().catch(O_o=>{});
-        reportschannel.send("`" + "New Report!`" + "\n" + "`" + "Reported by: `" + message.author + "\n" + "`" + "Reported User: `" + rUser + "\n" + "\n" + "`" + "Reason: `" + rReason);
-  
+        reportschannel.send({embed: {
+            color: 3447003,
+            author: {
+              name: "Report!",
+              icon_url: bot.user.avatarURL
+            },
+            description: "A new report just arrived \n \n ",
+            fields: [{
+                name: "Reported By: ",
+                value: `[${message.author}]()`,
+              },
+              {
+                name: "Reported User: ",
+                value: `[${rUser}]()`,
+              },
+              {
+                name: "Reason: ",
+                value: `[${rReason}]()`,
+              }
+            ],
+            timestamp: new Date(),
+            footer: {
+              text: "Reported at: "
+            }
+          }
+    });
+    
   }
   
   
