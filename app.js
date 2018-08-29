@@ -477,6 +477,35 @@ client.on('message', message => {
 }
   
   
+  
+  
+  if (message.content.startsWith(prefix + "report")){
+          let rUser = message.guild.member(message.mentions.users.first());
+        if(!rUser) return message.channel.send("ERROR: failed to find user.");
+        let rReason = message.content.split(" ").slice(2);
+
+
+        let reportEmbed = new Discord.RichEmbed()
+        .setTitle("Report")
+        .setColor("#15f153")
+        .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
+        .addField("Reported By", `${message.author} with ID: ${message.author.id}`)
+        .addField("Channel", message.channel)
+        .addField("Time", message.createdAt)
+        .addField("Reason", rReason);
+
+        message.reply("Your report has been submitted.");
+        let reportschannel = message.guild.channels.find(`name`, "reports");
+        if(!reportschannel) return message.channel.send("couldn't find reports channel.");
+
+        message.delete().catch(O_o=>{});
+        reportschannel.send(reportEmbed);
+  
+  }
+  
+  
+  
+  
   // !warn
   // !warn @mention [reden] stuurt de waarschuwing en de reden in het kanaal genaamd "log" en dm'd de persoon die gewaarschuwd is
   if (message.content.startsWith(prefix + "warn")){
