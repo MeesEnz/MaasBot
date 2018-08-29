@@ -490,9 +490,10 @@ client.on('message', message => {
         if(!reportschannel) return message.channel.send("couldn't find reports channel.");
 
         message.delete().catch(O_o=>{});
-        reportschannel.send("test");
+        reportschannel.send("`New Report` \n `Reported By: `" + message.author + "\n `Reported User: `" + rUser + "\n `Reason: `" + rReason + "\n" + new Date());
     
   }
+  
   
   
   
