@@ -480,17 +480,16 @@ client.on('message', message => {
   // !report
   
   if (message.content.startsWith(prefix + "report")){
-    let rUser = message.guild.member(message.mentions.users.first());
+        let rUser = message.guild.member(message.mentions.users.first());
         if(!rUser) return message.channel.send("ERROR: failed to find user.");
-        let rReason = message.content.split(" ").slice(2);
-
+        let rReason = message.content.slice(8);
 
         message.reply("Your report has been submitted.");
         let reportschannel = message.guild.channels.find(`name`, "reports");
         if(!reportschannel) return message.channel.send("couldn't find reports channel.");
 
         message.delete().catch(O_o=>{});
-        reportschannel.send("boi");
+        reportschannel.send("`" + "New Report!`" + "\n" + "`" + "Reported by: `" + message.author + "\n" + "`" + "Reported User: `" + rUser + "\n" + "\n" + "`" + "Reason: `" + rReason);
   
   }
   
