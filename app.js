@@ -255,7 +255,7 @@ client.on('message', message => {
           icon_url: client.user.avatarURL
         },
         title: "Add MaasBot to your server",
-        url: "https://discordapp.com/api/oauth2/authorize?client_id=443053206071934997&permissions=0&scope=bot",
+        url: "https://discordapp.com/oauth2/authorize?client_id=465952575154290698&permissions=8&scope=bot",
         description: "The prefix of this server is \"!\"\n\nMaasBot is a discord bot created by © MaasDev's",
         fields: [{
             name: "MaasDev's website",
